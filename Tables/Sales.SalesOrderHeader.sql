@@ -172,7 +172,7 @@ GO
 ALTER TABLE [Sales].[SalesOrderHeader]
 	WITH CHECK
 	ADD CONSTRAINT [FK_SalesOrderHeader_Address_BillToAddressID]
-	FOREIGN KEY ([BillToAddressID]) REFERENCES [Person].[Address] ([AddressID])
+	FOREIGN KEY ([BillToAddressID]) REFERENCES [Person].[TEST CHANGED] ([AddressID])
 ALTER TABLE [Sales].[SalesOrderHeader]
 	CHECK CONSTRAINT [FK_SalesOrderHeader_Address_BillToAddressID]
 
@@ -182,7 +182,7 @@ GO
 ALTER TABLE [Sales].[SalesOrderHeader]
 	WITH CHECK
 	ADD CONSTRAINT [FK_SalesOrderHeader_Address_ShipToAddressID]
-	FOREIGN KEY ([ShipToAddressID]) REFERENCES [Person].[Address] ([AddressID])
+	FOREIGN KEY ([ShipToAddressID]) REFERENCES [Person].[TEST CHANGED] ([AddressID])
 ALTER TABLE [Sales].[SalesOrderHeader]
 	CHECK CONSTRAINT [FK_SalesOrderHeader_Address_ShipToAddressID]
 

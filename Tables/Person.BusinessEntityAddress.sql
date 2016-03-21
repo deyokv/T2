@@ -36,7 +36,7 @@ GO
 ALTER TABLE [Person].[BusinessEntityAddress]
 	WITH CHECK
 	ADD CONSTRAINT [FK_BusinessEntityAddress_Address_AddressID]
-	FOREIGN KEY ([AddressID]) REFERENCES [Person].[Address] ([AddressID])
+	FOREIGN KEY ([AddressID]) REFERENCES [Person].[TEST CHANGED] ([AddressID])
 ALTER TABLE [Person].[BusinessEntityAddress]
 	CHECK CONSTRAINT [FK_BusinessEntityAddress_Address_AddressID]
 

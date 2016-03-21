@@ -1,0 +1,16 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE tSQLt.Private_OutputTestResults
+  @TestResultFormatter NVARCHAR(MAX) = NULL
+AS
+BEGIN
+    DECLARE @Formatter NVARCHAR(MAX);
+    SELECT @Formatter = COALESCE(@TestResultFormatter, tSQLt.GetTestResultFormatter());
+    EXEC (@Formatter);
+END
+GO
+EXEC sp_addextendedproperty N'tSQLt.ResultsFormatter', N'tSQLt.XmlResultFormatter', 'SCHEMA', N'tSQLt', 'PROCEDURE', N'Private_OutputTestResults', NULL, NULL
+GO
